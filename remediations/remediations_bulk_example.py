@@ -135,8 +135,13 @@ INSIGHTS_USER=username INSIGHTS_PASS=password example.py --cves CVE-2020-25661,C
 Sorry atm --tag and --cves together is not supported""")
 
 systems_tags_map = {}
+
 s = requests.Session()
-s.headers.update({'content-type': 'application/json'})
+s.headers.update({
+    'Content-Type': 'application/json',
+    'User-Agent': 'Insights API example (remediations_bulk_example.py) / 0.1',
+})
+
 s.auth = (os.environ.get('INSIGHTS_USER'), os.environ.get('INSIGHTS_PASS'))
 
 if __name__ == "__main__":
