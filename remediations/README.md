@@ -16,7 +16,7 @@ $ pip install -r requirements.txt
 ### Fix *all* CVEs for all Hosts matching a certain tag
 
 ```shell
-$ INSIGHTS_USER=foo INSIGHTS_PASS=bar remediations_bulk_example.py --tag 'insights-client=foo/bar'
+$ INSIGHTS_USER=foo INSIGHTS_PASS=bar remediations_bulk_example.py --tag 'insights-client/foo=bar'
 ```
 
 
